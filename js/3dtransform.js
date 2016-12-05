@@ -34,37 +34,10 @@
 		return div;
 	}
 
-
 	function transX(element, x) {
 		element.style.transform += 'translateX( ' + x + 'px )';
 		return element;
 	}
-
-	function transY(element, y) {
-		element.style.transform += 'translateY( ' + y + 'px )';
-		return element;
-	}
-
-	function transZ(element, z) {
-		element.style.transform += 'translateZ( ' + z + 'px )';
-		return element;
-	}
-
-	function rotateX(element, deg) {
-		element.style.transform += 'rotateX( ' + deg + 'deg )';
-		return element;
-	}
-
-	function rotateY(element, deg) {
-		element.style.transform += 'rotateY( ' + deg + 'deg )';
-		return element;
-	}
-
-	function rotateZ(element, deg) {
-		element.style.transform += 'rotateZ( ' + deg + 'deg )';
-		return element;
-	}
-
 
 	window.addEventListener("mousedown", function() {
 	  window.addEventListener("mousemove", calcAngle, false);
