@@ -68,3 +68,7 @@ body {
   margin-top: -10px;
   border: solid 1px lightgrey;
 }
+
+.cloudBase:hover {
+  background-color: rgba( 180, 0, 200, .5 );
+}
