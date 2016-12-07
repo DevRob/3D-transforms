@@ -7,9 +7,16 @@
   </head>
   <body>
     <div id="viewport" style="perspective: 400px;">
-		    <div id="world"></div>
+		    <div id="world">
+          <div class="cloudBase" style="transform: translateZ(128px)"></div>
+          <div class="cloudBase" style="transform: translateZ(-128px)"></div>
+          <div class="cloudBase" style="transform: translateY(128px) rotateX(90deg)"></div>
+          <div class="cloudBase" style="transform: translateY(-128px) rotateX(90deg)"></div>
+          <div class="cloudBase" style="transform: translateX(128px) rotateY(90deg)"></div>
+          <div class="cloudBase" style="transform: translateX(-128px) rotateY(90deg)"></div>
+        </div>
     </div>
 	</div>
   </body>
-  <script src="js/3dtransform.js"></script>
+  <script src="js/cube.js"></script>
 </html>

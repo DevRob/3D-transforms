@@ -44,8 +44,8 @@ body {
   margin-top: -256px;
   height: 512px;
   width: 512px;
-  transform: translateX( 0px ) translateY( 0px ) translateZ( 0px );
-  background-color: rgba( 255, 0, 0, .2 );
+  transform: translateX( 0px ) translateY( 0px ) translateZ( 0px ) rotate3d(1,1,1, 45deg);
+  /*background-color: rgba( 255, 0, 0, .2 );*/
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -60,10 +60,11 @@ body {
 .cloudBase {
   background-color: rgba( 255, 0, 255, .5 );
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 128px;
+  top: 128px;
   width: 256px;
   height: 256px;
   margin-left: -10px;
   margin-top: -10px;
+  border: solid 1px lightgrey;
 }
