@@ -44,7 +44,7 @@ body {
   margin-top: -256px;
   height: 512px;
   width: 512px;
-  transform: translateX( 0px ) translateY( 0px ) translateZ( 0px ) rotate3d(1,1,1, 45deg);
+  transform: translateX( 0px ) translateY( 0px ) translateZ( 0px );
   /*background-color: rgba( 255, 0, 0, .2 );*/
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -58,15 +58,23 @@ body {
 }
 
 .cloudBase {
+  color: lightgrey;
+  font-size: 25px;
+  text-align: center;
   background-color: rgba( 255, 0, 255, .5 );
   position: absolute;
   left: 128px;
   top: 128px;
   width: 256px;
   height: 256px;
-  margin-left: -10px;
-  margin-top: -10px;
+  line-height: 64px;
   border: solid 1px lightgrey;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .cloudBase:hover {
