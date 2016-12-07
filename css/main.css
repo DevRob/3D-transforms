@@ -3,14 +3,24 @@
   margin: 0;
   padding: 0
 }
+
 body {
   color: #eee;
   text-shadow: 0 -1px 0 rgba( 0, 0, 0, .6 );
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  line-height: 16px;
   overflow: hidden;
 }
+
+p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
 #viewport {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -67,7 +77,6 @@ body {
   top: 128px;
   width: 256px;
   height: 256px;
-  line-height: 64px;
   border: solid 1px lightgrey;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

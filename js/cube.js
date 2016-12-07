@@ -16,24 +16,6 @@
 	viewport.style.MozPerspective = perspective;
 	viewport.style.oPerspective = perspective;
 
-	// generate();
-	//
-	// function createCloud() {
-	//
-	// 	var div = document.createElement( 'div'  );
-	// 	div.className = 'cloudBase';
-	// 	var x = 0;
-	// 	var y = 0;
-	// 	var z = 0;
-	// 	var transform = 'translateX( ' + x + 'px ) translateY( ' + y + 'px ) translateZ( ' + z + 'px)';
-	// 	div.style.webkitTransform = transform;
-	// 	div.style.MozTransform = transform;
-	// 	div.style.oTransform = transform;
-	// 	world.appendChild( div );
-	//
-	// 	return div;
-	// }
-
 	function transX(element, x) {
 		element.style.transform += 'translateX( ' + x + 'px )';
 		return element;
@@ -49,18 +31,6 @@
 
 	window.addEventListener( 'mousewheel', onContainerMouseWheel );
 	window.addEventListener( 'DOMMouseScroll', onContainerMouseWheel );
-
-	// function generate() {
-	// 	objects = [];
-	// 	if ( world.hasChildNodes() ) {
-	// 		while ( world.childNodes.length >= 6 ) {
-	// 			world.removeChild( world.firstChild );
-	// 		}
-	// 	}
-	// 	for( var j = 0; j < 5; j++ ) {
-	// 		objects.push( createCloud() );
-	// 	}
-	// }
 
 	function updateView(depth, worldXAngle, worldYAngle) {
 		var transform = 'translateZ( ' + depth + 'px ) rotateX( ' + worldXAngle + 'deg ) rotateY( ' + worldYAngle + 'deg )';
