@@ -10,7 +10,9 @@
 		perspective = 1000,
 		x = 0,
 		worldYAngle = 0,
-		worldXAngle = 0;
+		worldXAngle = 0,
+		worldY = 0,
+		worldX = 0;
 
 	viewport.style.webkitPerspective = perspective;
 	viewport.style.MozPerspective = perspective;
@@ -22,18 +24,23 @@
 	}
 
 	window.addEventListener("mousedown", function() {
-	  window.addEventListener("mousemove", calcAngle, false);
+	  if(event.button === 0) {
+			window.addEventListener("mousemove", calcAngle, false);
+		} else if (event.button === 2) {
+			window.addEventListener("mousemove", calcMove, false);
+		}
 	});
 
 	window.addEventListener("mouseup", function() {
 	  window.removeEventListener("mousemove", calcAngle, false);
+		window.removeEventListener("mousemove", calcMove, false);
 	});
 
 	window.addEventListener( 'mousewheel', onContainerMouseWheel );
 	window.addEventListener( 'DOMMouseScroll', onContainerMouseWheel );
 
-	function updateView(depth, worldXAngle, worldYAngle) {
-		var transform = 'translateZ( ' + depth + 'px ) rotateX( ' + worldXAngle + 'deg ) rotateY( ' + worldYAngle + 'deg )';
+	function updateView(depth, worldXAngle, worldYAngle, worldX, worldY) {
+		var transform = 'translateY( ' + worldY + 'px ) translateX( ' + worldX + 'px ) translateZ( ' + depth + 'px ) rotateX( ' + worldXAngle + 'deg ) rotateY( ' + worldYAngle + 'deg )';
 		world.style.webkitTransform = transform;
 		world.style.MozTransform = transform;
 		world.style.oTransform = transform;
@@ -47,11 +54,18 @@
 		}, 300);
 		depth = depth - ( event.detail ? event.detail * -5 : event.wheelDelta / 2 );
 		depth = depth > 300 ? 300 : depth < -600 ? -600 : depth;
-		updateView(depth, worldXAngle, worldYAngle);
+		updateView(depth, worldXAngle, worldYAngle, worldX, worldY);
 	}
 
 	function calcAngle( event ){
+		console.log(event);
 		worldYAngle += event.movementX * 0.2;
 		worldXAngle += -event.movementY * 0.2;
-		updateView(depth, worldXAngle, worldYAngle);
+		updateView(depth, worldXAngle, worldYAngle, worldX, worldY);
+	}
+
+	function calcMove( event ){
+		worldX += event.movementX * 0.5;
+		worldY += event.movementY * 0.5;
+		updateView(depth, worldXAngle, worldYAngle, worldX, worldY);
 	}
