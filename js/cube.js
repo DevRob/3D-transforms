@@ -58,7 +58,6 @@
 	}
 
 	function calcAngle( event ){
-		console.log(event);
 		worldYAngle += event.movementX * 0.2;
 		worldXAngle += -event.movementY * 0.2;
 		updateView(depth, worldXAngle, worldYAngle, worldX, worldY);
