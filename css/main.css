@@ -89,3 +89,9 @@ p {
 .cloudBase:hover {
   background-color: rgba( 180, 0, 200, .5 );
 }
+
+.small {
+  width: 128px;
+  height: 128px;
+  background-color: rgba( 205, 123, 180, .5 );
+}
