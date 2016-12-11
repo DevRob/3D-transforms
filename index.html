@@ -6,22 +6,24 @@
     <title>3D transform</title>
   </head>
   <body oncontextmenu="return false;">
-    <div id="viewport" style="perspective: 400px;">
-		    <div id="world">
-          <div class="cloudBase" style="transform: translateZ(128px)"><p>mousedown<br> &<br> move</p></div>
-          <div class="cloudBase" style="transform: translateY(128px) rotateX(270deg)"></div>
-          <div class="cloudBase" style="transform: translateZ(-128px) rotateY(180deg)"><p>mousewheel<br> to<br> zoom</p></div>
-          <div class="cloudBase" style="transform: translateY(-128px) rotateX(90deg)"></div>
-          <div class="cloudBase" style="transform: translateX(128px) rotateY(90deg)"></div>
-          <div class="cloudBase" style="transform: translateX(-128px) rotateY(270deg)"></div>
+    <div class="container">
+      <div id="viewport" style="perspective: 400px;">
+  		    <div class="world" id="world" style="transform: translateX( 0px ) translateY( 0px ) translateZ( 0px )">
+            <div class="cloudBase" style="transform: translateZ(128px)"><p>mousedown<br> &<br> move</p></div>
+            <div class="cloudBase" style="transform: translateY(128px) rotateX(270deg)"></div>
+            <div class="cloudBase" style="transform: translateZ(-128px) rotateY(180deg)"><p>mousewheel<br> to<br> zoom</p></div>
+            <div class="cloudBase" style="transform: translateY(-128px) rotateX(90deg)"></div>
+            <div class="cloudBase" style="transform: translateX(128px) rotateY(90deg)"><p><img src="img/GitHub.png" alt="GitHub"></p></div>
+            <div class="cloudBase" style="transform: translateX(-128px) rotateY(270deg)"><p><img src="img/GitHub-cat.png" alt="GitHub"></p></div>
 
-          <div class="cloudBase small" style="transform: translateZ(64px) translateX(64px) translateY(64px)"><p>1</p></div>
-          <div class="cloudBase small" style="transform: translateY(128px) translateX(64px) rotateX(270deg)"><p>2</p></div>
-          <div class="cloudBase small" style="transform: translateZ(-64px) translateX(64px) translateY(64px) rotateY(180deg)"><p>3</p></div>
-          <div class="cloudBase small" style="transform: translateX(64px) rotateX(90deg)"><p>4</p></div>
-          <div class="cloudBase small" style="transform: translateX(128px) translateY(64px) rotateY(90deg)"><p>5</p></div>
-          <div class="cloudBase small" style="transform:  translateY(64px) rotateY(270deg)"><p>6</p></div>
-        </div>
+            <!-- <div class="cloudBase small" style="transform: translateZ(64px) translateX(64px) translateY(64px)"><p>1</p></div>
+            <div class="cloudBase small" style="transform: translateY(128px) translateX(64px) rotateX(270deg)"><p>2</p></div>
+            <div class="cloudBase small" style="transform: translateZ(-64px) translateX(64px) translateY(64px) rotateY(180deg)"><p>3</p></div>
+            <div class="cloudBase small" style="transform: translateX(64px) rotateX(90deg)"><p>4</p></div>
+            <div class="cloudBase small" style="transform: translateX(128px) translateY(64px) rotateY(90deg)"><p>5</p></div>
+            <div class="cloudBase small" style="transform:  translateY(64px) rotateY(270deg)"><p>6</p></div> -->
+          </div>
+      </div>
     </div>
 	</div>
   </body>
