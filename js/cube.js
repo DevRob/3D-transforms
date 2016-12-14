@@ -8,8 +8,8 @@ viewport = document.getElementById( 'viewport' ),
 depth = 0,
 perspective = 1000,
 x = 0,
-worldYAngle = -20,
-worldXAngle = -20,
+worldYAngle = -25,
+worldXAngle = -25,
 worldY = 0,
 worldX = 0;
 
@@ -22,7 +22,7 @@ function transX(element, x) {
 	return element;
 }
 
-window.addEventListener("mousedown", function() {
+window.addEventListener("mousedown", function(event) {
   if(event.button === 0) {
 		window.addEventListener("mousemove", calcAngle, false);
 	} else if (event.button === 2) {
@@ -43,6 +43,7 @@ function updateView(depth, worldXAngle, worldYAngle, worldX, worldY) {
 	world.style.webkitTransform = transform;
 	world.style.MozTransform = transform;
 	world.style.oTransform = transform;
+	console.log(depth, worldXAngle, worldYAngle, worldX, worldY);
 }
 
 function onContainerMouseWheel( event ) {
@@ -51,7 +52,7 @@ function onContainerMouseWheel( event ) {
 	setTimeout(function() {
 		viewport.style.cursor = "auto";
 	}, 300);
-	depth = depth - ( event.detail ? event.detail * -5 : event.wheelDelta / 2 );
+	depth -= ( event.detail ? event.detail * -5 : event.wheelDelta / 2 );
 	depth = depth > 300 ? 300 : depth < -600 ? -600 : depth;
 	updateView(depth, worldXAngle, worldYAngle, worldX, worldY);
 }
@@ -68,4 +69,4 @@ function calcMove( event ){
 	updateView(depth, worldXAngle, worldYAngle, worldX, worldY);
 }
 
-updateView(0, -20, -20, 0, 0);
+updateView(0, -25, -25, 0, 0);
