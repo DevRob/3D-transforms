@@ -43,7 +43,6 @@ function updateView(depth, worldXAngle, worldYAngle, worldX, worldY) {
 	world.style.webkitTransform = transform;
 	world.style.MozTransform = transform;
 	world.style.oTransform = transform;
-	console.log(depth, worldXAngle, worldYAngle, worldX, worldY);
 }
 
 function onContainerMouseWheel( event ) {
