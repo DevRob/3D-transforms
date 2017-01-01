@@ -13,9 +13,7 @@ worldXAngle = -25,
 worldY = 0,
 worldX = 0;
 
-viewport.style.webkitPerspective = perspective;
-viewport.style.MozPerspective = perspective;
-viewport.style.oPerspective = perspective;
+viewport.style.webkitPerspective = viewport.style.MozPerspective = viewport.style.oPerspective = perspective;
 
 function transX(element, x) {
 	element.style.transform += 'translateX( ' + x + 'px )';
@@ -52,7 +50,7 @@ function onContainerMouseWheel( event ) {
 		viewport.style.cursor = "auto";
 	}, 300);
 	depth -= ( event.detail ? event.detail * -5 : event.wheelDelta / 2 );
-	depth = depth > 300 ? 300 : depth < -600 ? -600 : depth;
+	depth = depth > 1500 ? 1500 : depth < -600 ? -600 : depth;
 	updateView(depth, worldXAngle, worldYAngle, worldX, worldY);
 }
 
