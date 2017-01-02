@@ -50,7 +50,7 @@ function onContainerMouseWheel( event ) {
 		viewport.style.cursor = "auto";
 	}, 300);
 	depth -= ( event.detail ? event.detail * -5 : event.wheelDelta / 2 );
-	depth = depth > 1500 ? 1500 : depth < -600 ? -600 : depth;
+	depth = depth > 600 ? 600 : depth < -600 ? -600 : depth;
 	updateView(depth, worldXAngle, worldYAngle, worldX, worldY);
 }
 
