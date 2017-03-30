@@ -21,7 +21,7 @@ function transX(element, x) {
 }
 
 window.addEventListener("mousedown", function(event) {
-  if(event.button === 0) {
+  	if(event.button === 0) {
 		window.addEventListener("mousemove", calcAngle, false);
 	} else if (event.button === 2) {
 		window.addEventListener("mousemove", calcMove, false);
@@ -29,7 +29,7 @@ window.addEventListener("mousedown", function(event) {
 });
 
 window.addEventListener("mouseup", function() {
-  window.removeEventListener("mousemove", calcAngle, false);
+  	window.removeEventListener("mousemove", calcAngle, false);
 	window.removeEventListener("mousemove", calcMove, false);
 });
 
